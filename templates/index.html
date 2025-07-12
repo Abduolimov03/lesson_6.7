@@ -270,7 +270,7 @@
 										<div class="tab-pane show active" id="news-0" role="tabpanel">
 											<div class="row">
 												<div class="col-3">
-													<!-- Item post -->	
+													<!-- Item post -->
 													<div>
 														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
 															<img src="{% static 'images/post-05.jpg' %}" alt="IMG">
@@ -301,7 +301,7 @@
 												</div>
 
 												<div class="col-3">
-													<!-- Item post -->	
+													<!-- Item post -->
 													<div>
 														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
 															<img src="{% static 'images/post-10.jpg' %}" alt="IMG">
@@ -2312,23 +2312,23 @@
 		<div class="container">
 			<div class="row m-rl--1">
 				<div class="col-md-6 p-rl-1 p-b-2">
-					<div class="bg-img1 size-a-3 how1 pos-relative" style="background-image: url(images/post-01.jpg);">
+					<div class="bg-img1 size-a-3 how1 pos-relative" style="background-image: url('{{ first_news.1.image.url }}');">
 						<a href="blog-detail-01.html" class="dis-block how1-child1 trans-03"></a>
 
 						<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
 							<a href="#" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
-								Business
+								{{ first_news.1.category.name }}
 							</a>
 
 							<h3 class="how1-child2 m-t-14 m-b-10">
 								<a href="blog-detail-01.html" class="how-txt1 size-a-6 f1-l-1 cl0 hov-cl10 trans-03">
-									Microsoft quisque at ipsum vel orci eleifend ultrices
+                                 {{ first_news.1.title }}
 								</a>
 							</h3>
 
 							<span class="how1-child2">
 								<span class="f1-s-4 cl11">
-									Jack Sims
+									{{ first_news.1.user }}
 								</span>
 
 								<span class="f1-s-3 cl11 m-rl-3">
@@ -2336,7 +2336,7 @@
 								</span>
 
 								<span class="f1-s-3 cl11">
-									Feb 16
+									 {{ first_news.1.created_at|date:"d-M" }}
 								</span>
 							</span>
 						</div>
@@ -2346,17 +2346,17 @@
 				<div class="col-md-6 p-rl-1">
 					<div class="row m-rl--1">
 						<div class="col-12 p-rl-1 p-b-2">
-							<div class="bg-img1 size-a-4 how1 pos-relative" style="background-image: url(images/post-02.jpg);">
+							<div class="bg-img1 size-a-4 how1 pos-relative" style="background-image: url('{{ first_news.2.image.url }}');">
 								<a href="blog-detail-01.html" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-24">
 									<a href="#" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
-										Culture
+										{{ first_news.2.category.name }}
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
 										<a href="blog-detail-01.html" class="how-txt1 size-a-7 f1-l-2 cl0 hov-cl10 trans-03">
-											London ipsum dolor sit amet, consectetur adipiscing elit.
+											{{ first_news.2.title }}
 										</a>
 									</h3>
 								</div>
@@ -2364,17 +2364,17 @@
 						</div>
 
 						<div class="col-sm-6 p-rl-1 p-b-2">
-							<div class="bg-img1 size-a-5 how1 pos-relative" style="background-image: url(images/post-03.jpg);">
+							<div class="bg-img1 size-a-5 how1 pos-relative" style="background-image: url('{{ first_news.3.image.url }}');">
 								<a href="blog-detail-01.html" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
 									<a href="#" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
-										Life Style
+										{{ first_news.3.category.name }}
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
 										<a href="blog-detail-01.html" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
-											Pellentesque dui nibh, pellen-tesque ut dapibus ut
+											{{ first_news.3.title }}
 										</a>
 									</h3>
 								</div>
@@ -2382,17 +2382,17 @@
 						</div>
 
 						<div class="col-sm-6 p-rl-1 p-b-2">
-							<div class="bg-img1 size-a-5 how1 pos-relative" style="background-image: url(images/post-04.jpg);">
+							<div class="bg-img1 size-a-5 how1 pos-relative" style="background-image: url('{{ first_news.4.image.url }}');">
 								<a href="blog-detail-01.html" class="dis-block how1-child1 trans-03"></a>
 
 								<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
 									<a href="#" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
-										Sport
+										{{ first_news.4.category.name }}
 									</a>
 
 									<h3 class="how1-child2 m-t-14">
 										<a href="blog-detail-01.html" class="how-txt1 size-h-1 f1-m-1 cl0 hov-cl10 trans-03">
-											Motobike Vestibulum vene-natis purus nec nibh volutpat
+											{{ first_news.4.title }}
 										</a>
 									</h3>
 								</div>
@@ -2417,39 +2417,56 @@
 								<h3 class="f1-m-2 cl12 tab01-title">
 									Entertainment
 								</h3>
+<ul class="nav nav-tabs" role="tablist">
+    <!-- "All" bo'limi -->
+    <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#tab1-1" role="tab">All</a>
+    </li>
+
+    <!-- Faqat 5 ta kategoriya -->
+    {% for category in categories|slice:":5" %}
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#tab-{{ category.id }}" role="tab">{{ category.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+
 
 								<!-- Nav tabs -->
-								<ul class="nav nav-tabs" role="tablist">
-									<li class="nav-item">
-										<a class="nav-link active" data-toggle="tab" href="#tab1-1" role="tab">All</a>
-									</li>
+<!--								<ul class="nav nav-tabs" role="tablist">-->
+<!--									<li class="nav-item">-->
+<!--										<a class="nav-link active" data-toggle="tab" href="#tab1-1" role="tab">All</a>-->
+<!--									</li>-->
 
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab1-2" role="tab">Celebrity</a>
-									</li>
+<!--									<li class="nav-item">-->
+<!--										{% for  category in categories %}-->
+<!--										<a class="nav-link" data-toggle="tab" href="#tab- {{ category.id }}" role="tab">{{ category.name }}</a>-->
+<!--										{% endfor %}-->
+<!--									</li>-->
 
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab1-3" role="tab">Movies</a>
-									</li>
+<!--&lt;!&ndash;									<li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="nav-link" data-toggle="tab" href="#tab1-3" role="tab">Movies</a>&ndash;&gt;-->
+<!--&lt;!&ndash;									</li>&ndash;&gt;-->
 
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab1-4" role="tab">Music</a>
-									</li>
+<!--&lt;!&ndash;									<li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="nav-link" data-toggle="tab" href="#tab1-4" role="tab">Music</a>&ndash;&gt;-->
+<!--&lt;!&ndash;									</li>&ndash;&gt;-->
 
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab1-5" role="tab">Games</a>
-									</li>
+<!--&lt;!&ndash;									<li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="nav-link" data-toggle="tab" href="#tab1-5" role="tab">Games</a>&ndash;&gt;-->
+<!--&lt;!&ndash;									</li>&ndash;&gt;-->
 
-									<li class="nav-item-more dropdown dis-none">
-										<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
-											<i class="fa fa-ellipsis-h"></i>
-										</a>
+<!--&lt;!&ndash;									<li class="nav-item-more dropdown dis-none">&ndash;&gt;-->
+<!--&lt;!&ndash;										<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">&ndash;&gt;-->
+<!--&lt;!&ndash;											<i class="fa fa-ellipsis-h"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;										</a>&ndash;&gt;-->
 
-										<ul class="dropdown-menu">
-											
-										</ul>
-									</li>
-								</ul>
+<!--&lt;!&ndash;										<ul class="dropdown-menu">&ndash;&gt;-->
+
+<!--&lt;!&ndash;										</ul>&ndash;&gt;-->
+<!--&lt;!&ndash;									</li>&ndash;&gt;-->
+<!--								</ul>-->
 
 								<!--  -->
 								<a href="category-01.html" class="tab01-link f1-s-1 cl9 hov-cl10 trans-03">
@@ -2468,19 +2485,19 @@
 											<!-- Item post -->	
 											<div class="m-b-30">
 												<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-													<img src="{% static 'images/post-05.jpg' %}" alt="IMG">
+													<img src="{{ news.0.image.url }}" alt="IMG">
 												</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
 														<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
-															American live music lorem ipsum dolor sit amet consectetur 
+															{{news.0.title}}
 														</a>
 													</h5>
 
 													<span class="cl8">
 														<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-															Music
+															{{ news.0.category.name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -2488,7 +2505,7 @@
 														</span>
 
 														<span class="f1-s-3">
-															Feb 18
+															{{ news.1.created_at|date:"d M" }}
 														</span>
 													</span>
 												</div>
@@ -2496,51 +2513,23 @@
 										</div>
 
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="blog-detail-01.html" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{% static 'images/post-06.jpg' %}" alt="IMG">
-												</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Music
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 17
-														</span>
-													</span>
-												</div>
-											</div>
-											
 											<!-- Item post -->
+											{% for new in news|slice:"1:4" %}
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="blog-detail-01.html" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{% static 'images/post-07.jpg' %}" alt="IMG">
+													<img src="{{ new.image.url }}" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
 														<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
+															{{ new.title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
 														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Game
+															{{ new.category.name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -2548,40 +2537,12 @@
 														</span>
 
 														<span class="f1-s-3">
-															Feb 16
+															{{ new.created_at|date:"d M" }}
 														</span>
 													</span>
 												</div>
 											</div>
-
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="blog-detail-01.html" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{% static 'images/post-08.jpg' %}" alt="IMG">
-												</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Celebrity
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 12
-														</span>
-													</span>
-												</div>
-											</div>
+											{% endfor %}
 										</div>
 									</div>
 								</div>
@@ -2599,7 +2560,7 @@
 												<div class="p-t-20">
 													<h5 class="p-b-5">
 														<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
-															American live music lorem ipsum dolor sit amet consectetur 
+															American live music lorem ipsum dolor sit amet consectetur
 														</a>
 													</h5>
 
@@ -3097,33 +3058,11 @@
 								</h3>
 
 								<!-- Nav tabs -->
-								<ul class="nav nav-tabs" role="tablist">
+									{% for category in categories|slice:":5" %}
 									<li class="nav-item">
-										<a class="nav-link active" data-toggle="tab" href="#tab2-1" role="tab">All</a>
+										<a class="nav-link" data-toggle="tab" href="#tab-{{ category.id }}" role="tab">{{ category.name }}</a>
 									</li>
-
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab2-2" role="tab">Finance</a>
-									</li>
-
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab2-3" role="tab">Money & Markets</a>
-									</li>
-
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab2-4" role="tab">Small Business</a>
-									</li>
-
-									<li class="nav-item-more dropdown dis-none">
-										<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
-											<i class="fa fa-ellipsis-h"></i>
-										</a>
-
-										<ul class="dropdown-menu">
-											
-										</ul>
-									</li>
-								</ul>
+									{% endfor %}
 
 								<!--  -->
 								<a href="category-01.html" class="tab01-link f1-s-1 cl9 hov-cl10 trans-03">
@@ -3142,19 +3081,19 @@
 											<!-- Item post -->	
 											<div class="m-b-30">
 												<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-													<img src="{% static 'images/post-10.jpg' %}" alt="IMG">
+													<img src="{{ news.1.image.url }}" alt="IMG">
 												</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
 														<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
-															Bitcoin lorem ipsum dolor sit amet consectetur 
+															{{ news.1.title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
 														<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-															Finance
+															{{ news.1.category.name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -3162,7 +3101,7 @@
 														</span>
 
 														<span class="f1-s-3">
-															Feb 18
+															{{ news.created_at|date:"d M" }}
 														</span>
 													</span>
 												</div>
@@ -3170,22 +3109,22 @@
 										</div>
 
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
+											{% for new in news|slice:"4:8" %}
 											<!-- Item post -->	
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="blog-detail-01.html" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{% static 'images/post-11.jpg' %}" alt="IMG">
+													<img src="{{ new.image.url }}" alt="IMG">
 												</a>
-
 												<div class="size-w-2">
 													<h5 class="p-b-5">
 														<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
+															{{ new.title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
 														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Small Business
+															{{ new.category.name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -3193,69 +3132,13 @@
 														</span>
 
 														<span class="f1-s-3">
-															Feb 17
+															{{ new.created_at|date:"d M" }}
 														</span>
 													</span>
+
 												</div>
 											</div>
-											
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="blog-detail-01.html" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{% static 'images/post-12.jpg' %}" alt="IMG">
-												</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Economy
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 16
-														</span>
-													</span>
-												</div>
-											</div>
-
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="blog-detail-01.html" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{% static 'images/post-13.jpg' %}" alt="IMG">
-												</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Money & Markets
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 12
-														</span>
-													</span>
-												</div>
-											</div>
+											{% endfor %}
 										</div>
 									</div>
 								</div>
@@ -3647,35 +3530,13 @@
 
 								<!-- Nav tabs -->
 								<ul class="nav nav-tabs" role="tablist">
+									{% for category in categories|slice:":5" %}
 									<li class="nav-item">
-										<a class="nav-link active" data-toggle="tab" href="#tab3-1" role="tab">All</a>
+										<a class="nav-link" data-toggle="tab" href="#tab-{{ category.id }}" role="tab">{{ category.name }}</a>
 									</li>
+									{% endfor %}
 
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab3-2" role="tab">Hotels</a>
-									</li>
 
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab3-3" role="tab">Flight</a>
-									</li>
-
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab3-4" role="tab">Beachs</a>
-									</li>
-
-									<li class="nav-item">
-										<a class="nav-link" data-toggle="tab" href="#tab3-5" role="tab">Culture</a>
-									</li>
-
-									<li class="nav-item-more dropdown dis-none">
-										<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
-											<i class="fa fa-ellipsis-h"></i>
-										</a>
-
-										<ul class="dropdown-menu">
-											
-										</ul>
-									</li>
 								</ul>
 
 								<!--  -->
@@ -3695,19 +3556,19 @@
 											<!-- Item post -->	
 											<div class="m-b-30">
 												<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-													<img src="{% static 'images/post-14.jpg' %}" alt="IMG">
+													<img src="{{ news.2.image.url }}" alt="IMG">
 												</a>
 
 												<div class="p-t-20">
 													<h5 class="p-b-5">
 														<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
-															You wish lorem ipsum dolor sit amet consectetur 
+															{{ news.2.title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
 														<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-															Hotels
+															{{ news.2.category.name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -3715,7 +3576,7 @@
 														</span>
 
 														<span class="f1-s-3">
-															Feb 18
+															{{ news.2.created_ad|date:"d M" }}
 														</span>
 													</span>
 												</div>
@@ -3723,51 +3584,23 @@
 										</div>
 
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="blog-detail-01.html" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{% static 'images/post-15.jpg' %}" alt="IMG">
-												</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Beachs
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 17
-														</span>
-													</span>
-												</div>
-											</div>
-											
 											<!-- Item post -->
+													{% for new in news|slice:"1:4" %}
 											<div class="flex-wr-sb-s m-b-30">
 												<a href="blog-detail-01.html" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{% static 'images/post-16.jpg' %}" alt="IMG">
+													<img src="{{ new.image.url }}" alt="IMG">
 												</a>
 
 												<div class="size-w-2">
 													<h5 class="p-b-5">
 														<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
+															{{ new.title }}
 														</a>
 													</h5>
 
 													<span class="cl8">
 														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Flight
+															{{ new.category.name }}
 														</a>
 
 														<span class="f1-s-3 m-rl-3">
@@ -3775,40 +3608,12 @@
 														</span>
 
 														<span class="f1-s-3">
-															Feb 16
+															{{ new.created_at|date:"d M" }}
 														</span>
 													</span>
 												</div>
 											</div>
-
-											<!-- Item post -->
-											<div class="flex-wr-sb-s m-b-30">
-												<a href="blog-detail-01.html" class="size-w-1 wrap-pic-w hov1 trans-03">
-													<img src="{% static 'images/post-17.jpg' %}" alt="IMG">
-												</a>
-
-												<div class="size-w-2">
-													<h5 class="p-b-5">
-														<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-															Donec metus orci, malesuada et lectus vitae
-														</a>
-													</h5>
-
-													<span class="cl8">
-														<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-															Culture
-														</a>
-
-														<span class="f1-s-3 m-rl-3">
-															-
-														</span>
-
-														<span class="f1-s-3">
-															Feb 12
-														</span>
-													</span>
-												</div>
-											</div>
+											{% endfor %}
 										</div>
 									</div>
 								</div>
@@ -3817,7 +3622,7 @@
 								<div class="tab-pane fade" id="tab3-2" role="tabpanel">
 									<div class="row">
 										<div class="col-sm-6 p-r-25 p-r-15-sr991">
-											<!-- Item post -->	
+											<!-- Item post -->
 											<div class="m-b-30">
 												<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
 													<img src="{% static 'images/post-15.jpg' %}" alt="IMG">
@@ -3826,7 +3631,7 @@
 												<div class="p-t-20">
 													<h5 class="p-b-5">
 														<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
-															You wish lorem ipsum dolor sit amet consectetur 
+															You wish lorem ipsum dolor sit amet consectetur
 														</a>
 													</h5>
 
@@ -3951,7 +3756,7 @@
 												<div class="p-t-20">
 													<h5 class="p-b-5">
 														<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
-															You wish lorem ipsum dolor sit amet consectetur 
+															You wish lorem ipsum dolor sit amet consectetur
 														</a>
 													</h5>
 
@@ -4328,55 +4133,17 @@
 							</div>
 
 							<ul class="p-t-35">
+								{% for new in news|slice:"0:5" %}
 								<li class="flex-wr-sb-s p-b-22">
 									<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
-										1
+										{{ forloop.counter }}
 									</div>
 
 									<a href="#" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit
+										{{ new.title }}
 									</a>
 								</li>
-
-								<li class="flex-wr-sb-s p-b-22">
-									<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
-										2
-									</div>
-
-									<a href="#" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
-										Proin velit consectetur non neque
-									</a>
-								</li>
-
-								<li class="flex-wr-sb-s p-b-22">
-									<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
-										3
-									</div>
-
-									<a href="#" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
-										Nunc vestibulum, enim vitae condimentum volutpat lobortis ante
-									</a>
-								</li>
-
-								<li class="flex-wr-sb-s p-b-22">
-									<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0 m-b-6">
-										4
-									</div>
-
-									<a href="#" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
-										Proin velit justo consectetur non neque elementum
-									</a>
-								</li>
-
-								<li class="flex-wr-sb-s p-b-22">
-									<div class="size-a-8 flex-c-c borad-3 size-a-8 bg9 f1-m-4 cl0">
-										5
-									</div>
-
-									<a href="#" class="size-w-3 f1-s-7 cl3 hov-cl10 trans-03">
-										Proin velit consectetur non neque
-									</a>
-								</li>
+								{% endfor  %}
 							</ul>
 						</div>
 
@@ -4472,23 +4239,24 @@
 					</div>
 
 					<div class="row p-t-35">
+						{% for new in news|slice:"1:6" %}
 						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
+							<!-- Item latest -->
 							<div class="m-b-45">
 								<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-									<img src="{% static 'images/latest-01.jpg' %}" alt="IMG">
+									<img src="{{ new.image.url }}" alt="IMG">
 								</a>
 
 								<div class="p-t-16">
 									<h5 class="p-b-5">
 										<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
-											You wish lorem ipsum dolor sit amet consectetur 
+											{{ new.title }}
 										</a>
 									</h5>
 
 									<span class="cl8">
 										<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by John Alvarado
+											{{ new.user }}
 										</a>
 
 										<span class="f1-s-3 m-rl-3">
@@ -4496,167 +4264,13 @@
 										</span>
 
 										<span class="f1-s-3">
-											Feb 18
+											{{ new.created_at|date:"d M" }}
 										</span>
 									</span>
 								</div>
 							</div>
 						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							<div class="m-b-45">
-								<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-									<img src=" {% static 'images/latest-02.jpg' %}" alt="IMG">
-								</a>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
-											You wish lorem ipsum dolor sit amet consectetur 
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by John Alvarado
-										</a>
-
-										<span class="f1-s-3 m-rl-3">
-											-
-										</span>
-
-										<span class="f1-s-3">
-											Feb 16
-										</span>
-									</span>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							<div class="m-b-45">
-								<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-									<img src="{% static 'images/latest-03.jpg' %}" alt="IMG">
-								</a>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
-											You wish lorem ipsum dolor sit amet consectetur 
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by John Alvarado
-										</a>
-
-										<span class="f1-s-3 m-rl-3">
-											-
-										</span>
-
-										<span class="f1-s-3">
-											Feb 15
-										</span>
-									</span>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							<div class="m-b-45">
-								<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-									<img src="{% static 'images/latest-04.jpg' %}" alt="IMG">
-								</a>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
-											You wish lorem ipsum dolor sit amet consectetur 
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by John Alvarado
-										</a>
-
-										<span class="f1-s-3 m-rl-3">
-											-
-										</span>
-
-										<span class="f1-s-3">
-											Feb 13
-										</span>
-									</span>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							<div class="m-b-45">
-								<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-									<img src="{% static 'images/latest-05.jpg' %}" alt="IMG">
-								</a>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
-											You wish lorem ipsum dolor sit amet consectetur 
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by John Alvarado
-										</a>
-
-										<span class="f1-s-3 m-rl-3">
-											-
-										</span>
-
-										<span class="f1-s-3">
-											Feb 10
-										</span>
-									</span>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-6 p-r-25 p-r-15-sr991">
-							<!-- Item latest -->	
-							<div class="m-b-45">
-								<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-									<img src="{% static 'images/latest-06.jpg' %}" alt="IMG">
-								</a>
-
-								<div class="p-t-16">
-									<h5 class="p-b-5">
-										<a href="blog-detail-01.html" class="f1-m-3 cl2 hov-cl10 trans-03">
-											You wish lorem ipsum dolor sit amet consectetur 
-										</a>
-									</h5>
-
-									<span class="cl8">
-										<a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-											by John Alvarado
-										</a>
-
-										<span class="f1-s-3 m-rl-3">
-											-
-										</span>
-
-										<span class="f1-s-3">
-											Feb 09
-										</span>
-									</span>
-								</div>
-							</div>
-						</div>
+						{% endfor %}
 					</div>
 				</div>
 
@@ -4731,37 +4345,13 @@
 							</div>
 
 							<div class="flex-wr-s-s m-rl--5">
+								{% for new in news|slice:"1:8" %}
 								<a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
-									Fashion
+									{{ new.category.name }}
 								</a>
+								{% endfor %}
 
-								<a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
-									Lifestyle
-								</a>
 
-								<a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
-									Denim
-								</a>
-
-								<a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
-									Streetstyle
-								</a>
-
-								<a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
-									Crafts
-								</a>
-
-								<a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
-									Magazine
-								</a>
-
-								<a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
-									News
-								</a>
-
-								<a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
-									Blogs
-								</a>
 							</div>	
 						</div>
 					</div>
@@ -4816,107 +4406,54 @@
 					</div>
 
 					<div class="col-sm-6 col-lg-4 p-b-20">
+
 						<div class="size-h-3 flex-s-c">
 							<h5 class="f1-m-7 cl0">
 								Popular Posts
 							</h5>
 						</div>
-
+						{% for new in news|slice:"0:3" %}
 						<ul>
 							<li class="flex-wr-sb-s p-b-20">
 								<a href="#" class="size-w-4 wrap-pic-w hov1 trans-03">
-									<img src="{% static 'images/popular-post-01.jpg' %}" alt="IMG">
+									<img src="{{ new.image.url }}" alt="IMG">
 								</a>
 
 								<div class="size-w-5">
 									<h6 class="p-b-5">
 										<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03">
-											Donec metus orci, malesuada et lectus vitae
+											{{ new.title }}
 										</a>
 									</h6>
 
 									<span class="f1-s-3 cl6">
-										Feb 17
+										{{ new.created_at|date:"d M" }}
 									</span>
 								</div>
 							</li>
 
-							<li class="flex-wr-sb-s p-b-20">
-								<a href="#" class="size-w-4 wrap-pic-w hov1 trans-03">
-									<img src="{% static 'images/popular-post-02.jpg' %}" alt="IMG">
-								</a>
 
-								<div class="size-w-5">
-									<h6 class="p-b-5">
-										<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03">
-											Lorem ipsum dolor sit amet, consectetur
-										</a>
-									</h6>
-
-									<span class="f1-s-3 cl6">
-										Feb 16
-									</span>
-								</div>
-							</li>
-
-							<li class="flex-wr-sb-s p-b-20">
-								<a href="#" class="size-w-4 wrap-pic-w hov1 trans-03">
-									<img src="{% static 'images/popular-post-03.jpg' %}" alt="IMG">
-								</a>
-
-								<div class="size-w-5">
-									<h6 class="p-b-5">
-										<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03">
-											Suspendisse dictum enim quis imperdiet auctor
-										</a>
-									</h6>
-
-									<span class="f1-s-3 cl6">
-										Feb 15
-									</span>
-								</div>
-							</li>
+			{% endfor %}
 						</ul>
+
 					</div>
 
 					<div class="col-sm-6 col-lg-4 p-b-20">
+
 						<div class="size-h-3 flex-s-c">
 							<h5 class="f1-m-7 cl0">
 								Category
 							</h5>
 						</div>
-
-						<ul class="m-t--12">
-							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
-									Fashion (22)
-								</a>
-							</li>
-
-							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
-									Technology (29)
-								</a>
-							</li>
-
-							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
-									Street Style (15)
-								</a>
-							</li>
-
-							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
-									Life Style (28)
-								</a>
-							</li>
-
-							<li class="how-bor1 p-rl-5 p-tb-10">
-								<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
-									DIY & Crafts (16)
-								</a>
-							</li>
-						</ul>
+							<ul class="m-t--12">
+								{% for category in categories %}
+									<li class="how-bor1 p-rl-5 p-tb-10">
+										<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+											{{ category.name }} ({{ category.news_set.count }})
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
 					</div>
 				</div>
 			</div>
