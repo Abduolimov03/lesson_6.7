@@ -2,6 +2,56 @@
 <html lang="en">
 {% load static %}
 <head>
+	{% if messages %}
+			{% for message in messages %}
+                <div class="messages {{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar</title>
+    <style>
+        .navbar {
+            background-color: #2d89ef;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #1b5fab;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}">🚪 Chiqish</a>
+        {% else %}
+            <a href="{% url 'login' %}">🔑 Login</a>
+            <a href="{% url 'signup' %}">📝 Ro'yxatdan o'tish</a>
+        {% endif %}
+    </div>
+
+</body>
+</html>
 	<title>Home 01</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
