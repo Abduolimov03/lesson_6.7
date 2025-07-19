@@ -2,11 +2,11 @@
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <title>Ro'yxatdan o'tish</title>
+    <title>Parolni o'zgartirish</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            background: #f7f9fc;
+            background: #f0f2f5;
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
@@ -14,21 +14,21 @@
             height: 100vh;
         }
 
-        .signup-container {
-            background: white;
+        .change-pass-container {
+            background: #fff;
             padding: 30px 40px;
             border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             width: 400px;
         }
 
-        .signup-container h2 {
+        .change-pass-container h2 {
             text-align: center;
             margin-bottom: 20px;
             color: #333;
         }
 
-        .signup-container form input {
+        form input {
             width: 100%;
             padding: 10px 12px;
             margin: 10px 0;
@@ -37,24 +37,23 @@
             font-size: 14px;
         }
 
-        .signup-container button {
+        button {
             width: 100%;
             padding: 12px;
-            background-color: #2d89ef;
+            background-color: #007bff;
             color: white;
             border: none;
             border-radius: 6px;
             font-size: 16px;
             cursor: pointer;
-            margin-top: 10px;
         }
 
-        .signup-container button:hover {
-            background-color: #1b5fab;
+        button:hover {
+            background-color: #0056b3;
         }
 
         .messages {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             padding: 10px;
             border-radius: 5px;
         }
@@ -75,15 +74,14 @@
         }
 
         .back-home a {
-            color: #2d89ef;
+            color: #007bff;
             text-decoration: none;
-            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <div class="signup-container">
-        <h2>Ro'yxatdan o'tish</h2>
+    <div class="change-pass-container">
+        <h2>Parolni o'zgartirish</h2>
 
         {% if messages %}
             {% for message in messages %}
@@ -96,7 +94,7 @@
         <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Ro'yxatdan o'tish</button>
+            <button type="submit">Parolni o'zgartirish</button>
         </form>
 
         <div class="back-home">

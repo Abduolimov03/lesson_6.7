@@ -44,6 +44,7 @@
     <div class="navbar">
         {% if user.is_authenticated %}
             <a href="{% url 'logout' %}">🚪 Chiqish</a>
+		    <a href="{% url 'profile' %}">Profile</a>
         {% else %}
             <a href="{% url 'login' %}">🔑 Login</a>
             <a href="{% url 'signup' %}">📝 Ro'yxatdan o'tish</a>

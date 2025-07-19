@@ -21,7 +21,7 @@ class SignUpForm(forms.ModelForm):
 
     def save(self, commit=True):
         user = super().save(commit=False)
-        user.set_password(self.cleaned_data['password1'])  # bu yerda password1 asosiy parol
+        user.set_password(self.cleaned_data['password1'])
         if commit:
             user.save()
         return user
@@ -29,4 +29,20 @@ class SignUpForm(forms.ModelForm):
 class LoginForm(AuthenticationForm):
     username = forms.CharField(max_length=120, label='Login')
     password = forms.CharField(label='Parol', widget=forms.PasswordInput)
+
+
+class ChangePassForm(forms.Form):
+    old_pass = forms.CharField(label='eski parol', widget=forms.PasswordInput)
+    new_pass = forms.CharField(label='yangi parol', widget=forms.PasswordInput)
+    confirm_pass = forms.CharField(label='parolni tsdiqlang', widget=forms.PasswordInput)
+    code = forms.CharField(label='Email ga yuborilgan kod', max_length=6)
+
+    def clean(self):
+        cleane_data = super().clean()
+        new_pass = self.cleaned_data['new_pass']
+        confirm_pass = self.cleaned_data['confirm_pass']
+        if new_pass != confirm_pass:
+            raise forms.ValidationError('Parollar mos emas')
+
+        return cleane_data
 
